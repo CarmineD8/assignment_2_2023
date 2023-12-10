@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find assignment_2_2023)/launch/sim_w1.launch" />
+    <param name="des_pos_x" value= "0.0" />
+    <param name="des_pos_y" value= "1.0" />
+    <node pkg="assignment_2_2023" type="wall_follow_service.py" name="wall_follower" />
+    <node pkg="assignment_2_2023" type="go_to_point_service.py" name="go_to_point"  />
+    <node pkg="assignment_2_2023" type="bug_as.py" name="bug_action_service" output="screen" />
+</launch>
